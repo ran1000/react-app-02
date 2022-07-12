@@ -40,11 +40,8 @@ function App() {
     return (
       <Card
         key={item.key}
-        title={item.title}
-        image={item.image}
-        rating={item.rating}
-        price={item.price}
-        openSpots={item.openSpots}
+        // Alternative to item={item}
+        {...item}
       />
     )
   })
