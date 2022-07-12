@@ -5,17 +5,21 @@ import Card from "./components/Card";
 import './App.css';
 
 const experienceA = {
+  key: 1,
   image: "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3dpbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
   rating: 4,
   title: "Life lessons with John Doe",
   price: 135,
+  openSpots: 2
 }
 
 const experienceB = {
+  key: 2,
   image: "https://images.unsplash.com/photo-1631125915902-d8abe9225ff2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2VyYW1pY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
   rating: 5,
   title: "Ceramic with Lisa Anderson",
   price: 50,
+  openSpots: 0
 }
 
 const experiences = [];
@@ -26,6 +30,7 @@ function App() {
   const cards = experiences.map(item => {
     return (
       <Card
+        key={item.key}
         title={item.title}
         image={item.image}
         rating={item.rating}
