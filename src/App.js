@@ -22,9 +22,18 @@ const experienceB = {
   openSpots: 0
 }
 
+const experienceC = {
+  key: 3,
+  image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+  rating: 3,
+  title: "Walking Tour",
+  openSpots: 2
+}
+
 const experiences = [];
 experiences.push(experienceA);
 experiences.push(experienceB);
+experiences.push(experienceC);
 
 function App() {
   const cards = experiences.map(item => {
@@ -35,6 +44,7 @@ function App() {
         image={item.image}
         rating={item.rating}
         price={item.price}
+        openSpots={item.openSpots}
       />
     )
   })

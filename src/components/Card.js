@@ -5,9 +5,9 @@ export default function Card(props) {
   return (
     // Card Displayed Information
     <div className="card">
-      <div className="soldout-label">
+      {props.openSpots === 0 && <div className="soldout-label">
         <h5>SOLD OUT</h5>
-      </div>
+      </div>}
       <img src={props.image} alt="Experience." />
       <div className="card-info">
         <p>
@@ -16,12 +16,12 @@ export default function Card(props) {
         <p>
           {props.title}
         </p>
-        <p>
+        {props.price ? <p>
           <strong>
             From ${props.price}
           </strong>
           / person
-        </p>
+        </p> : <p>n.d.</p>}
       </div>
     </div>
   )
