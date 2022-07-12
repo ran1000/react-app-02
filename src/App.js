@@ -2,7 +2,17 @@ import React from "react"
 import logo from './logo.svg';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Card from "./components/Card";
 import './App.css';
+
+const experiences = [
+  {
+    image: "strnig",
+    rating: 2,
+    title: "dss",
+    price: 3
+  }
+]
 
 function App() {
   return (
@@ -25,6 +35,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <div className="card-grid">
+        <Card />
+      </div>
     </div>
   );
 }

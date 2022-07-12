@@ -50,3 +50,44 @@ nav>img {
   padding: 0px 30px;
   font-size: 1.3rem;
 }
+
+.card {
+  /* background-color: lightgray; */
+  width: 250px;
+  height: 400px;
+  position: relative;
+}
+
+.card>img {
+  /* background-color: blue; */
+  height: 80%;
+  width: 100%;
+  /* background-color: blue; */
+  object-fit: cover;
+  object-position: 60%;
+  /* z-index: 1; */
+  border-radius: 10px;
+}
+
+.card-info i {
+  color: fuchsia;
+}
+
+.soldout-label {
+  position: absolute;
+  border-radius: 5px;
+  top: 8px;
+  left: 8px;
+  background-color: white;
+  /* z-index: 3; */
+}
+
+.soldout-label>h5 {
+  padding: 5px 5px;
+  margin: 0px;
+}
+
+.card-grid {
+  margin: 30px;
+  display: flex;
+}
